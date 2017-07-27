@@ -1,0 +1,5 @@
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Entity\bin\Debug\Scheduler.Business.Entity.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Entity\bin\Debug\Scheduler.Business.Entity.pdb
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Entity\obj\Debug\Scheduler.Business.Entity.csprojResolveAssemblyReference.cache
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Entity\obj\Debug\Scheduler.Business.Entity.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Entity\obj\Debug\Scheduler.Business.Entity.pdb

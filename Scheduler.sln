@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Data.Implementation", "Scheduler.Data.Implementation\Scheduler.Data.Implementation.csproj", "{E4E0A60A-A5E2-4628-A31E-3005AC657A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Core", "Scheduler.Core\Scheduler.Core.csproj", "{C594818C-1CBB-435F-959A-40EA6F5D6466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.DBEntity", "Scheduler.DBEntity\Scheduler.DBEntity.csproj", "{5E56E247-96BE-4511-97FA-AC50D5DB9090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Data.Specification", "Scheduler.Data.Specification\Scheduler.Data.Specification.csproj", "{5C3E2F0F-DCC9-4E87-8423-8649DC2C04E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToBeDeleted", "ToBeDeleted\ToBeDeleted.csproj", "{1363BE39-908B-4E1C-9483-61250C709796}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E47A33D-C27D-4224-9B76-106B2C694F18}"
+	ProjectSection(SolutionItems) = preProject
+		MigrationNote.txt = MigrationNote.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Business.Specification", "Scheduler.Business.Specification\Scheduler.Business.Specification.csproj", "{2610B147-AD37-478C-91A5-DE659881C9D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Business.Entity", "Scheduler.Business.Entity\Scheduler.Business.Entity.csproj", "{49666D4A-9576-454D-ABDE-EBA5C8BA7F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Business.Implementation", "Scheduler.Business.Implementation\Scheduler.Business.Implementation.csproj", "{2CACC4A5-E143-405E-9316-81177B4CA6F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Application", "Scheduler.Application\Scheduler.Application.csproj", "{427414B3-10DA-47BB-ABAE-6F558F57E24B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4E0A60A-A5E2-4628-A31E-3005AC657A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E0A60A-A5E2-4628-A31E-3005AC657A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E0A60A-A5E2-4628-A31E-3005AC657A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E0A60A-A5E2-4628-A31E-3005AC657A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C594818C-1CBB-435F-959A-40EA6F5D6466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C594818C-1CBB-435F-959A-40EA6F5D6466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C594818C-1CBB-435F-959A-40EA6F5D6466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C594818C-1CBB-435F-959A-40EA6F5D6466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E56E247-96BE-4511-97FA-AC50D5DB9090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E56E247-96BE-4511-97FA-AC50D5DB9090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E56E247-96BE-4511-97FA-AC50D5DB9090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E56E247-96BE-4511-97FA-AC50D5DB9090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3E2F0F-DCC9-4E87-8423-8649DC2C04E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3E2F0F-DCC9-4E87-8423-8649DC2C04E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3E2F0F-DCC9-4E87-8423-8649DC2C04E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3E2F0F-DCC9-4E87-8423-8649DC2C04E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1363BE39-908B-4E1C-9483-61250C709796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1363BE39-908B-4E1C-9483-61250C709796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1363BE39-908B-4E1C-9483-61250C709796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1363BE39-908B-4E1C-9483-61250C709796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2610B147-AD37-478C-91A5-DE659881C9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2610B147-AD37-478C-91A5-DE659881C9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2610B147-AD37-478C-91A5-DE659881C9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2610B147-AD37-478C-91A5-DE659881C9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49666D4A-9576-454D-ABDE-EBA5C8BA7F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49666D4A-9576-454D-ABDE-EBA5C8BA7F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49666D4A-9576-454D-ABDE-EBA5C8BA7F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49666D4A-9576-454D-ABDE-EBA5C8BA7F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CACC4A5-E143-405E-9316-81177B4CA6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CACC4A5-E143-405E-9316-81177B4CA6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CACC4A5-E143-405E-9316-81177B4CA6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CACC4A5-E143-405E-9316-81177B4CA6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427414B3-10DA-47BB-ABAE-6F558F57E24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427414B3-10DA-47BB-ABAE-6F558F57E24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427414B3-10DA-47BB-ABAE-6F558F57E24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427414B3-10DA-47BB-ABAE-6F558F57E24B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4E0A60A-A5E2-4628-A31E-3005AC657A23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scheduler.Data.Implementation</RootNamespace>
+    <AssemblyName>Scheduler.Data.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITransactionManager.cs" />
+    <Compile Include="SafeDataReaderExt.cs" />
+    <Compile Include="AccountRepository.cs" />
+    <Compile Include="DatabaseRepository.cs" />
+    <Compile Include="ISafeReader.cs" />
+    <Compile Include="ITransactionFactory.cs" />
+    <Compile Include="IWarningsNotifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryLocator.cs" />
+    <Compile Include="SafeDataReader.cs" />
+    <Compile Include="SchedulerDatabaseConnection.cs" />
+    <Compile Include="TransactionFactory.cs" />
+    <Compile Include="TransactionManager.cs" />
+    <Compile Include="TransactionManagerBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj">
+      <Project>{c594818c-1cbb-435f-959a-40ea6f5d6466}</Project>
+      <Name>Scheduler.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheduler.Data.Specification\Scheduler.Data.Specification.csproj">
+      <Project>{5c3e2f0f-dcc9-4e87-8423-8649dc2c04e9}</Project>
+      <Name>Scheduler.Data.Specification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheduler.DBEntity\Scheduler.DBEntity.csproj">
+      <Project>{5e56e247-96be-4511-97fa-ac50d5db9090}</Project>
+      <Name>Scheduler.DBEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

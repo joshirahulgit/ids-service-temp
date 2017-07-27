@@ -1,0 +1,5 @@
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Core\bin\Debug\Scheduler.Core.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Core\bin\Debug\Scheduler.Core.pdb
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Core\obj\Debug\Scheduler.Core.csprojResolveAssemblyReference.cache
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Core\obj\Debug\Scheduler.Core.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Core\obj\Debug\Scheduler.Core.pdb

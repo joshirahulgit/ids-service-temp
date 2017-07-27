@@ -1,0 +1,7 @@
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\bin\Debug\Scheduler.Data.Specification.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\bin\Debug\Scheduler.Data.Specification.pdb
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\bin\Debug\Scheduler.DBEntity.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\bin\Debug\Scheduler.DBEntity.pdb
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\obj\Debug\Scheduler.Data.Specification.csprojResolveAssemblyReference.cache
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\obj\Debug\Scheduler.Data.Specification.dll
+C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Specification\obj\Debug\Scheduler.Data.Specification.pdb

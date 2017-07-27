@@ -1,0 +1,2 @@
+RequestContext can be accessed from GlobalContext insted of Container.
+WebConfigurationManager.AppSettings is replaced with GlobalContext.ApplicationSetting 
