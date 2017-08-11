@@ -40,10 +40,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessControlEntryDto.cs" />
+    <Compile Include="AccessControlListDto.cs" />
+    <Compile Include="AccountDto.cs" />
     <Compile Include="AccountEnumDto.cs" />
     <Compile Include="AccountEnumsDto.cs" />
+    <Compile Include="AccountGenerateIDconfigDto.cs" />
+    <Compile Include="AccountSettingDto.cs" />
+    <Compile Include="AddressDto.cs" />
+    <Compile Include="AppointmentResourceDto.cs" />
+    <Compile Include="AppointmentResourcePhysicianDto.cs" />
+    <Compile Include="AppointmentStatusDto.cs" />
     <Compile Include="AuditEntry.cs" />
+    <Compile Include="AuditEntryDto.cs" />
+    <Compile Include="AuditRequestDto.cs" />
+    <Compile Include="AuthorizationAlertDto.cs" />
+    <Compile Include="AuthorizationProcedureDto.cs" />
+    <Compile Include="CommentItemDto.cs" />
+    <Compile Include="CommentTypeDto.cs" />
+    <Compile Include="CptBaseDto.cs" />
+    <Compile Include="CPTModifierDto.cs" />
+    <Compile Include="CrosswalkPayerDto.cs" />
+    <Compile Include="CustomPayerDto.cs" />
+    <Compile Include="DtoBase.cs" />
+    <Compile Include="EntityTypeDto.cs" />
+    <Compile Include="EthnicityDto.cs" />
+    <Compile Include="ExceptionRequestDto.cs" />
+    <Compile Include="HolidayComparer.cs" />
+    <Compile Include="NotificationSlotCommentDto.cs" />
+    <Compile Include="NotificationSlotDto.cs" />
+    <Compile Include="OrderTransformParameterDto.cs" />
+    <Compile Include="PayerDto.cs" />
+    <Compile Include="PaymentFeesDto.cs" />
+    <Compile Include="PdfFileDto.cs" />
+    <Compile Include="PhysicianSpecialityDto.cs" />
+    <Compile Include="PhysicianTypeDto.cs" />
+    <Compile Include="ProcedureDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RacesDto.cs" />
+    <Compile Include="ReferralsDto.cs" />
+    <Compile Include="ResourceDurationDto.cs" />
+    <Compile Include="SchedulerIntegrationAddressDto.cs" />
+    <Compile Include="SchedulerSecuredEntities.cs" />
+    <Compile Include="TechCompleteSuggestionListDto.cs" />
+    <Compile Include="UnhandledExceptionEntryDto.cs" />
+    <Compile Include="UserAccessRightToAccount.cs" />
+    <Compile Include="UserDto.cs" />
+    <Compile Include="UserRoleDto.cs" />
+    <Compile Include="VolumeUnitDto.cs" />
+    <Compile Include="WorkingScheduleItemDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj">
+      <Project>{C594818C-1CBB-435F-959A-40EA6F5D6466}</Project>
+      <Name>Scheduler.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

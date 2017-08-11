@@ -7,7 +7,7 @@ namespace Scheduler.DBEntity
 {
     public abstract class EntityBase : IEntity
     {
-        public virtual long Id { get; protected set; }
+        public virtual long Id { get; set; }
 
         //TODO: This method is converting DBEntities to DTO, this makes DBEntities anf DTO coupled. This can be done via association in future. -By RJ
         //public ReflectableMobileType ReflectedConvert2Mobile<ReflectableMobileType>() where ReflectableMobileType : DtoBase

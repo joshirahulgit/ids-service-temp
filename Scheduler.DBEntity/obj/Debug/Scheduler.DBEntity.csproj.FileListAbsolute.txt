@@ -3,3 +3,10 @@ C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.DBEntity\bin\Debug\Schedul
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.csprojResolveAssemblyReference.cache
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.dll
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.pdb
+C:\src\Scheduler-Temp\Scheduler.DBEntity\bin\Debug\Scheduler.DBEntity.dll
+C:\src\Scheduler-Temp\Scheduler.DBEntity\bin\Debug\Scheduler.DBEntity.pdb
+C:\src\Scheduler-Temp\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.dll
+C:\src\Scheduler-Temp\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.pdb
+C:\src\Scheduler-Temp\Scheduler.DBEntity\obj\Debug\Scheduler.DBEntity.csprojResolveAssemblyReference.cache
+C:\src\Scheduler-Temp\Scheduler.DBEntity\bin\Debug\Scheduler.Core.dll
+C:\src\Scheduler-Temp\Scheduler.DBEntity\bin\Debug\Scheduler.Core.pdb

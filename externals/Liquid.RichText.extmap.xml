@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <assembly>
+    <name>Liquid.RichText</name>
+    <version>5.3.3.34048</version>
+    <publickeytoken>7fbdd25c3fcc3919</publickeytoken>
+    <relpath>Liquid.RichText.dll</relpath>
+    <extension downloadUri="Liquid.RichText.zip" />
+  </assembly>
+</manifest>

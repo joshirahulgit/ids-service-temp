@@ -9,3 +9,16 @@ C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Implementation\bin\De
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.csprojResolveAssemblyReference.cache
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.dll
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Data.Implementation.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Data.Implementation.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Core.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Data.Specification.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.DBEntity.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Core.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.Data.Specification.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\Scheduler.DBEntity.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.csprojResolveAssemblyReference.cache
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\obj\Debug\Scheduler.Data.Implementation.pdb
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\eSquaredCore.dll
+C:\src\Scheduler-Temp\Scheduler.Data.Implementation\bin\Debug\eSquaredUtils.dll

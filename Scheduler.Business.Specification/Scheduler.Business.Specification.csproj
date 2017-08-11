@@ -41,12 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IAuthenticationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Scheduler.Business.Entity\Scheduler.Business.Entity.csproj">
       <Project>{49666d4a-9576-454d-abde-eba5c8ba7f89}</Project>
       <Name>Scheduler.Business.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj">
+      <Project>{c594818c-1cbb-435f-959a-40ea6f5d6466}</Project>
+      <Name>Scheduler.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

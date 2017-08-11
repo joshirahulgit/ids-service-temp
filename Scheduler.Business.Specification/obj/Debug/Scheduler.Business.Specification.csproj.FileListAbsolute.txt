@@ -5,3 +5,12 @@ C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Specification\bin
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.csprojResolveAssemblyReference.cache
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.dll
 C:\Users\rjoshi.QUICKLOOK\Desktop\Scheduler\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.pdb
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Business.Specification.dll
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Business.Specification.pdb
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Business.Entity.dll
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Business.Entity.pdb
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.csprojResolveAssemblyReference.cache
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.dll
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\obj\Debug\Scheduler.Business.Specification.pdb
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Core.dll
+C:\src\Scheduler-Temp\Scheduler.Business.Specification\bin\Debug\Scheduler.Core.pdb

@@ -41,10 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountRepository.cs" />
+    <Compile Include="IAccountSettingRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="IRepositoryTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj">
+      <Project>{C594818C-1CBB-435F-959A-40EA6F5D6466}</Project>
+      <Name>Scheduler.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Scheduler.DBEntity\Scheduler.DBEntity.csproj">
       <Project>{5e56e247-96be-4511-97fa-ac50d5db9090}</Project>
       <Name>Scheduler.DBEntity</Name>

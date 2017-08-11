@@ -40,11 +40,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessControlEntry.cs" />
+    <Compile Include="AccessControlList.cs" />
     <Compile Include="Account.cs" />
     <Compile Include="AccountEnum.cs" />
+    <Compile Include="AccountGenerateIDconfig.cs" />
+    <Compile Include="AccountSetting.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="AddressType.cs" />
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentCheckListItem.cs" />
+    <Compile Include="AppointmentCheckListValue.cs" />
+    <Compile Include="AppointmentOrder.cs" />
+    <Compile Include="AppointmentResource.cs" />
+    <Compile Include="AppointmentResourceModality.cs" />
+    <Compile Include="AppointmentResourcePatient.cs" />
+    <Compile Include="AppointmentResourcePhysician.cs" />
+    <Compile Include="AppointmentResourceTime.cs" />
+    <Compile Include="AppointmentResourceType.cs" />
+    <Compile Include="AppointmentStatus.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AuthorizationAlert.cs" />
+    <Compile Include="AuthorizationProcedure.cs" />
+    <Compile Include="CodeCategory.cs" />
+    <Compile Include="CommentItem.cs" />
+    <Compile Include="CommentType.cs" />
+    <Compile Include="CptBase.cs" />
+    <Compile Include="CPTModifier.cs" />
+    <Compile Include="CreditCardPayment.cs" />
+    <Compile Include="CrosswalkPayer.cs" />
+    <Compile Include="CustomPayer.cs" />
+    <Compile Include="Diagnosis.cs" />
     <Compile Include="EntityBase.cs" />
+    <Compile Include="EntityType.cs" />
+    <Compile Include="Ethnicity.cs" />
+    <Compile Include="Holiday.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="Mammography.cs" />
+    <Compile Include="MammographyHistory.cs" />
+    <Compile Include="MarketingRep.cs" />
+    <Compile Include="ModalityType.cs" />
+    <Compile Include="NotificationSlot.cs" />
+    <Compile Include="NotificationSlotComment.cs" />
+    <Compile Include="OrderCreationParameter.cs" />
+    <Compile Include="OrderTransformParameter.cs" />
+    <Compile Include="Pathology.cs" />
+    <Compile Include="PathologyDetail.cs" />
+    <Compile Include="PathologyDiagnosis.cs" />
+    <Compile Include="PatientAuthorization.cs" />
+    <Compile Include="PatientComment.cs" />
+    <Compile Include="PatientEmployment.cs" />
+    <Compile Include="PatientGuarantor.cs" />
+    <Compile Include="PatientIdentifier.cs" />
+    <Compile Include="PatientPayment.cs" />
+    <Compile Include="Payer.cs" />
+    <Compile Include="PaymentFee.cs" />
+    <Compile Include="PhysicianSpeciality.cs" />
+    <Compile Include="PhysicianSpecializationType.cs" />
+    <Compile Include="PhysicianType.cs" />
+    <Compile Include="Procedure.cs" />
+    <Compile Include="ProcedureType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="Referral.cs" />
+    <Compile Include="ReferringNote.cs" />
+    <Compile Include="ResourceDuration.cs" />
+    <Compile Include="ResourceLocation.cs" />
+    <Compile Include="RoomType.cs" />
+    <Compile Include="SchedulerImage.cs" />
+    <Compile Include="SchedulerIntegration.cs" />
+    <Compile Include="SchedulerModalityVirtualRoom.cs" />
+    <Compile Include="SnomedProcedure.cs" />
+    <Compile Include="TaskTemplate.cs" />
+    <Compile Include="TechCompleteSuggestionList.cs" />
+    <Compile Include="Tumor.cs" />
+    <Compile Include="UsedAuthorization.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="Visit.cs" />
+    <Compile Include="VolumeUnit.cs" />
+    <Compile Include="WorkingScheduleItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj">
+      <Project>{C594818C-1CBB-435F-959A-40EA6F5D6466}</Project>
+      <Name>Scheduler.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

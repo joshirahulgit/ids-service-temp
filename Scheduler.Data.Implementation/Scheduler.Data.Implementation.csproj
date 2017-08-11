@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="eSquaredCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_externals\eSquaredCore.dll</HintPath>
+    </Reference>
+    <Reference Include="eSquaredUtils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_externals\eSquaredUtils.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountSettingRepository.cs" />
     <Compile Include="ITransactionManager.cs" />
     <Compile Include="SafeDataReaderExt.cs" />
     <Compile Include="AccountRepository.cs" />
@@ -68,6 +77,42 @@
       <Project>{5e56e247-96be-4511-97fa-ac50d5db9090}</Project>
       <Name>Scheduler.DBEntity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_externals\AtalaImaging.dll" />
+    <Content Include="_externals\Atalasoft.dotImage.dll" />
+    <Content Include="_externals\Atalasoft.dotImage.xml" />
+    <Content Include="_externals\EnterpriseClasses.dll" />
+    <Content Include="_externals\EnterpriseServices.dll" />
+    <Content Include="_externals\eSquaredCore.dll" />
+    <Content Include="_externals\eSquaredUtils.dll" />
+    <Content Include="_externals\PatchAccount001.sql" />
+    <Content Include="_externals\patchGlobal000001.sql" />
+    <Content Include="_externals\patchGlobal000002.sql" />
+    <Content Include="_externals\patchGlobal000003.sql" />
+    <Content Include="_externals\patchGlobal000004.sql" />
+    <Content Include="_externals\patchGlobal000005.sql" />
+    <Content Include="_externals\patchGlobal000006.sql" />
+    <Content Include="_externals\patchGlobal000007.sql" />
+    <Content Include="_externals\patchGlobal000008.sql" />
+    <Content Include="_externals\patchGlobal000009.sql" />
+    <Content Include="_externals\patchGlobal000010.sql" />
+    <Content Include="_externals\patchGlobal000011.sql" />
+    <Content Include="_externals\patchGlobal000012.sql" />
+    <Content Include="_externals\patchGlobal000013.sql" />
+    <Content Include="_externals\patchGlobal000014.sql" />
+    <Content Include="_externals\patchGlobal000015.sql" />
+    <Content Include="_externals\patchGlobal000016.sql" />
+    <Content Include="_externals\patchGlobal000017.sql" />
+    <Content Include="_externals\patchGlobal000018.sql" />
+    <Content Include="_externals\patchGlobal000019.sql" />
+    <Content Include="_externals\patchGlobal000020.sql" />
+    <Content Include="_externals\patchGlobal000021.sql" />
+    <Content Include="_externals\patchGlobal000022.sql" />
+    <Content Include="_externals\WcfServiceEligibilityReport.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_externals\Atalasoft.dotImage.lic" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

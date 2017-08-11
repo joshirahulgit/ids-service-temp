@@ -196,6 +196,14 @@ namespace Scheduler.Data.Implementation
             _databaseConnection.Connect2Global();
             _currentMode = ConnectionMode.Global;
         }
+        protected void SetConnection2Global(bool isReadOnly = false)
+        {
+            if (isReadOnly)
+                //_databaseConnection = new SchedulerDatabaseConnection(ConfigurationManager.ConnectionStrings["IDSDatabaseRO"].ConnectionString);
+                _databaseConnection = new SchedulerDatabaseConnection(GlobalContext.ApplicationSetting.CSRO);
+            _databaseConnection.Connect2Global();
+            _currentMode = ConnectionMode.Global;
+        }
 
         protected void SetConnection2Esquared()
         {
@@ -440,6 +448,37 @@ DOS, AccountName, RecurringSeriesID, CC, Modality, Version, CreateUser)
         {
             SetConnection2Account(ResolveNameByAccountId(accountID));
         }
+
+        protected void SetConnection2Account(bool isReadOnly = false)
+        {
+            SetConnection2Account(this.CurrentAccountId, isReadOnly);
+        }
+
+        protected void SetConnection2Account(long accountID, bool isReadOnly = false)
+        {
+            SetConnection2Account(ResolveNameByAccountId(accountID), isReadOnly);
+        }
+
+        protected void SetConnection2Account(String accountName, bool isReadOnly = false)
+        {
+            if (isReadOnly)
+                //_databaseConnection = new SchedulerDatabaseConnection(ConfigurationManager.ConnectionStrings["IDSDatabaseRO"].ConnectionString);
+                _databaseConnection = new SchedulerDatabaseConnection(GlobalContext.ApplicationSetting.CSRO);
+            if (_databaseConnection.State != System.Data.ConnectionState.Open)
+            {
+                try
+                {
+                    _databaseConnection.Open();
+                }
+                catch (Exception e)
+                {
+                    throw new SchedulerException(SchedulerExceptionType.DatabaseConnectionFailed, e.Message);
+                }
+            }
+            _databaseConnection.Connect2Account(accountName);
+            _currentMode = ConnectionMode.Account;
+        }
+
 
         protected long CurrentAccountId
         {

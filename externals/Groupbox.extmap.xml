@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <assembly>
+    <name>Groupbox</name>
+    <version>1.0.0.0</version>
+    <publickeytoken>e10c557b3d812be2</publickeytoken>
+    <relpath>Groupbox.dll</relpath>
+    <extension downloadUri="Groupbox.zip" />
+  </assembly>
+</manifest>

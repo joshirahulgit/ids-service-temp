@@ -8,8 +8,10 @@ namespace Scheduler.Core
 {
     public interface IApplicationSetting
     {
+
         int E2SourceApplicationId { get; }
         int DBAgeInPatchesApplicableForAutoPatching { get; }
         string CS { get; }
+        string CSRO { get; }
     }
 }

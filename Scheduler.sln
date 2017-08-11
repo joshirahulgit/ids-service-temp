@@ -26,6 +26,70 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Business.Implemen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler.Application", "Scheduler.Application\Scheduler.Application.csproj", "{427414B3-10DA-47BB-ABAE-6F558F57E24B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseServices", "EnterpriseServices", "{7298CEFD-0BFE-4C96-A55F-1D9498EE0F8E}"
+	ProjectSection(SolutionItems) = preProject
+		EnterpriseServices\Common.svc = EnterpriseServices\Common.svc
+		EnterpriseServices\ePrescription.svc = EnterpriseServices\ePrescription.svc
+		EnterpriseServices\Readme.txt = EnterpriseServices\Readme.txt
+		EnterpriseServices\Web.config = EnterpriseServices\Web.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{27B5DA8D-55A6-4A03-9151-C87FF121227B}"
+	ProjectSection(SolutionItems) = preProject
+		EnterpriseServices\bin\EnterpriseClasses.dll = EnterpriseServices\bin\EnterpriseClasses.dll
+		EnterpriseServices\bin\EnterpriseClasses.pdb = EnterpriseServices\bin\EnterpriseClasses.pdb
+		EnterpriseServices\bin\EnterpriseDBLayer.dll = EnterpriseServices\bin\EnterpriseDBLayer.dll
+		EnterpriseServices\bin\EnterpriseDBLayer.pdb = EnterpriseServices\bin\EnterpriseDBLayer.pdb
+		EnterpriseServices\bin\EnterpriseErrorHandler.dll = EnterpriseServices\bin\EnterpriseErrorHandler.dll
+		EnterpriseServices\bin\EnterpriseErrorHandler.pdb = EnterpriseServices\bin\EnterpriseErrorHandler.pdb
+		EnterpriseServices\bin\EnterpriseServices.dll = EnterpriseServices\bin\EnterpriseServices.dll
+		EnterpriseServices\bin\EnterpriseServices.pdb = EnterpriseServices\bin\EnterpriseServices.pdb
+		EnterpriseServices\bin\eSquaredUtils.dll = EnterpriseServices\bin\eSquaredUtils.dll
+		EnterpriseServices\bin\eSquaredUtils.pdb = EnterpriseServices\bin\eSquaredUtils.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{29E0C92A-F94F-4DC8-894D-E25E2645D1C7}"
+	ProjectSection(SolutionItems) = preProject
+		externals\Aspose.Words.dll = externals\Aspose.Words.dll
+		externals\Aspose.Words.lic = externals\Aspose.Words.lic
+		externals\FJ.Core.dll = externals\FJ.Core.dll
+		externals\FJ.Core.extmap.xml = externals\FJ.Core.extmap.xml
+		externals\fjcore.snk = externals\fjcore.snk
+		externals\Groupbox.dll = externals\Groupbox.dll
+		externals\Groupbox.extmap.xml = externals\Groupbox.extmap.xml
+		externals\groupbox.snk = externals\groupbox.snk
+		externals\Liquid.RichText.dll = externals\Liquid.RichText.dll
+		externals\Liquid.RichText.extmap.xml = externals\Liquid.RichText.extmap.xml
+		externals\Microsoft.Expression.Controls.dll = externals\Microsoft.Expression.Controls.dll
+		externals\Microsoft.Expression.Controls.extmap.xml = externals\Microsoft.Expression.Controls.extmap.xml
+		externals\Microsoft.Expression.Controls.xml = externals\Microsoft.Expression.Controls.xml
+		externals\Microsoft.Expression.Drawing.dll = externals\Microsoft.Expression.Drawing.dll
+		externals\Microsoft.Expression.Drawing.extmap.xml = externals\Microsoft.Expression.Drawing.extmap.xml
+		externals\Microsoft.Expression.Drawing.xml = externals\Microsoft.Expression.Drawing.xml
+		externals\Microsoft.Expression.Effects.dll = externals\Microsoft.Expression.Effects.dll
+		externals\Microsoft.Expression.Effects.extmap.xml = externals\Microsoft.Expression.Effects.extmap.xml
+		externals\Microsoft.Expression.Effects.xml = externals\Microsoft.Expression.Effects.xml
+		externals\Microsoft.Expression.Interactions.dll = externals\Microsoft.Expression.Interactions.dll
+		externals\Microsoft.Expression.Interactions.extmap.xml = externals\Microsoft.Expression.Interactions.extmap.xml
+		externals\Microsoft.Expression.Interactions.xml = externals\Microsoft.Expression.Interactions.xml
+		externals\Newtonsoft.Json.dll = externals\Newtonsoft.Json.dll
+		externals\PatientVisit.ServerPages.dll = externals\PatientVisit.ServerPages.dll
+		externals\Quicklook.dll = externals\Quicklook.dll
+		externals\RestSharp.dll = externals\RestSharp.dll
+		externals\Silverlight.InputCtrl.dll = externals\Silverlight.InputCtrl.dll
+		externals\System.ServiceModel.dll = externals\System.ServiceModel.dll
+		externals\System.ServiceModel.extmap.xml = externals\System.ServiceModel.extmap.xml
+		externals\System.Windows.Controls.Input.dll = externals\System.Windows.Controls.Input.dll
+		externals\System.Windows.Controls.Input.Toolkit.dll = externals\System.Windows.Controls.Input.Toolkit.dll
+		externals\System.Windows.Controls.Input.Toolkit.extmap.xml = externals\System.Windows.Controls.Input.Toolkit.extmap.xml
+		externals\System.Windows.Controls.Layout.Toolkit.dll = externals\System.Windows.Controls.Layout.Toolkit.dll
+		externals\System.Windows.Controls.Layout.Toolkit.extmap.xml = externals\System.Windows.Controls.Layout.Toolkit.extmap.xml
+		externals\System.Windows.Controls.Toolkit.dll = externals\System.Windows.Controls.Toolkit.dll
+		externals\System.Windows.Controls.Toolkit.extmap.xml = externals\System.Windows.Controls.Toolkit.extmap.xml
+		externals\System.Windows.Interactivity.dll = externals\System.Windows.Interactivity.dll
+		externals\System.Windows.Interactivity.extmap.xml = externals\System.Windows.Interactivity.extmap.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,5 +135,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27B5DA8D-55A6-4A03-9151-C87FF121227B} = {7298CEFD-0BFE-4C96-A55F-1D9498EE0F8E}
 	EndGlobalSection
 EndGlobal
