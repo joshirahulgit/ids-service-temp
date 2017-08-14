@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Scheduler.Business.Specification
 {
-    public interface IAuthenticationService
+    public interface IAuthenticationService : IContract
     {
         void CopyAccessRole(int roleId, string name, List<int> accIds);
 

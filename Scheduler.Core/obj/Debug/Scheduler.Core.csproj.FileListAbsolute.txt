@@ -7,3 +7,4 @@ C:\src\Scheduler-Temp\Scheduler.Core\bin\Debug\Scheduler.Core.dll
 C:\src\Scheduler-Temp\Scheduler.Core\bin\Debug\Scheduler.Core.pdb
 C:\src\Scheduler-Temp\Scheduler.Core\obj\Debug\Scheduler.Core.dll
 C:\src\Scheduler-Temp\Scheduler.Core\obj\Debug\Scheduler.Core.pdb
+C:\src\Scheduler-Temp\Scheduler.Core\obj\Debug\Scheduler.Core.csprojResolveAssemblyReference.cache

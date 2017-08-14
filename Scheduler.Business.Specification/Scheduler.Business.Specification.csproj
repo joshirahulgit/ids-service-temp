@@ -41,7 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IAppointmentService.cs" />
     <Compile Include="IAuthenticationService.cs" />
+    <Compile Include="IContract.cs" />
+    <Compile Include="ICptService.cs" />
+    <Compile Include="IEmailService.cs" />
+    <Compile Include="IEnterpriseService.cs" />
+    <Compile Include="IImageService.cs" />
+    <Compile Include="IMammographyService.cs" />
+    <Compile Include="IResourceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

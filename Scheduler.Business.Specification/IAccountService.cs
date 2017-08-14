@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Scheduler.Business.Specification
 {
-    public interface IAccountService
+    public interface IAccountService : IContract
     {
         AppointmentResourcePhysicianDto GetDefaultProvider(string patientRecordNumber, string patientLocation, bool userIsDictator);
 

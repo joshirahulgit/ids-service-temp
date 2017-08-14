@@ -42,8 +42,14 @@
   <ItemGroup>
     <Compile Include="IAccountRepository.cs" />
     <Compile Include="IAccountSettingRepository.cs" />
+    <Compile Include="IAuditRepository.cs" />
+    <Compile Include="IEnterpriseServiceRepository.cs" />
+    <Compile Include="IImageRepository.cs" />
+    <Compile Include="IMammographyRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryTraits.cs" />
+    <Compile Include="IResourceRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

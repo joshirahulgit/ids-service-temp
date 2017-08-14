@@ -7,6 +7,7 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Scheduler.DBEntity.UserProfile;
 
 namespace Scheduler.Data.Implementation
 {
@@ -1839,7 +1840,260 @@ namespace Scheduler.Data.Implementation
             return nsComment;
         }
 
-      
+        public static User ToUser(this IDataReader reader)
+        {
+            SafeDataReader safeReader = new SafeDataReader(reader);
+            User u = new User();
+            u.Id = safeReader.GetInt32("ID");
+            u.Login = safeReader.GetString("UserId");
+            u.FirstName = safeReader.GetString("FirstName");
+            u.LastName = safeReader.GetString("LastName");
+            u.Password = safeReader.GetString("Password");
+            u.IsIDSUser = safeReader.GetBoolean("IsIDSUser");
+            u.IsSuperAdmin = safeReader.GetNullableBoolean("SuperUser") ?? false;
+            u.Accounts.Add(reader.ToAccount());
+
+            return u;
+        }
+
+        public static UserProfileComment ToUserProfileComment(this IDataReader reader)
+        {
+            SafeDataReader safeReader = new SafeDataReader(reader);
+            UserProfileComment result = new UserProfileComment();
+
+            result.Id = safeReader.GetInt32("Id");
+            result.TimeFrom = safeReader.GetNullableDateTime("TimeFrom");
+            result.TimeTo = safeReader.GetNullableDateTime("TimeTo");
+            var isAppointmentOnly = safeReader.GetNullableBoolean("IsAppointmentOnly");
+            result.IsAppointmentOnly = isAppointmentOnly.HasValue && isAppointmentOnly.Value;
+
+            return result;
+        }
+
+        public static ColumnConfig ExtractFromReader(IDataReader reader)
+        {
+
+            SafeDataReader safeReader = new SafeDataReader(reader);
+            ColumnConfig result = new ColumnConfig();
+
+            result.Id = safeReader.GetInt32("Id");
+            result.Size = safeReader.GetInt32("Size");
+            result.Name = safeReader.GetNullableString("Name");
+            result.Order = safeReader.GetInt32("Order");
+            result.Sort = safeReader.GetNullableString("Sort");
+            return result;
+        }
+
+        public static UserProfile ToUserProfile(this IDataReader reader)
+        {
+            SafeDataReader safeReader = new SafeDataReader(reader);
+            UserProfile result = new UserProfile();
+            result.Id = safeReader.GetInt32("Id");
+            result.UserId = safeReader.GetInt32("UserId");
+            result.RoleId = safeReader.GetNullableInt32("RoleId");
+            result.RoleName = safeReader.GetNullableString("RoleName");
+            result.Filters = safeReader.GetNullableString("Filters");
+            result.ScheduleMode = (ScheduleMode)safeReader.GetInt32("ScheduleMode");
+            result.DefaultViewMode = safeReader.GetInt32("DefaultViewMode");
+            result.PrintOption = safeReader.GetInt32("PrintOption");
+            result.CalendarDisplayMode = (CalendarDisplayMode)safeReader.GetInt32("CalendarDisplayMode");
+            result.FirstVisibleHour = safeReader.GetDouble("FirstVisibleHour");
+            result.LastVisibleHour = safeReader.GetDouble("LastVisibleHour");
+            result.PatientInfoVisitIndex = safeReader.GetInt32("PatientInfoVisitIndex");
+            result.CaptionMode = safeReader.GetInt32("CaptionMode");
+            result.ProfileName = safeReader.GetString("ProfileName");
+            result.IsSummaryPageEnabled = safeReader.GetBoolean("IsSummaryPageEnabled");
+            result.IsExportedSuccessfully = safeReader.GetNullableBoolean("IsExportedSuccessfully");
+            int? commentDefaultId = safeReader.GetNullableInt32("CommentDefaultsId");
+            if (commentDefaultId.HasValue)
+            {
+                result.CommentDefaults = new UserProfileComment() { Id = commentDefaultId.Value };
+            }
+
+            return result;
+        }
+
+        public static PatientInvoice ToPatientInvoice(this SafeDataReader sr)
+        {
+            PatientInvoice result = new PatientInvoice();
+            result.Id = sr.GetInt32("InvoiceId");
+            result.CreatedDate = sr.GetDateTime("InvoiceCreatedDate");
+            return result;
+        }
+
+        public static AuditEntry ToAuditEntry(SafeDataReader reader)
+        {
+            AuditEntry auditEntry = new AuditEntry();
+            auditEntry.Id = reader.GetInt32("Id");
+            auditEntry.AppointmentId = reader.GetNullableInt64("AppointmentId");
+            auditEntry.Location = reader.GetNullableString("Location");
+            auditEntry.UserId = reader.GetNullableString("UserId");
+            auditEntry.AuditMsg = reader.GetNullableString("Audit");
+            auditEntry.UserName = reader.GetNullableString("UserName");
+            auditEntry.Printer = reader.GetNullableString("Printer");
+            auditEntry.Date = reader.GetNullableDateTime("Date");
+            auditEntry.ComputerName = reader.GetNullableString("ComputerName");
+            auditEntry.Destination = reader.GetNullableString("Destination");
+            auditEntry.UserActivityId = reader.GetNullableInt64("UserActivityId");
+            auditEntry.EntityId = reader.GetNullableString("EntityId");
+            auditEntry.ActionType = reader.GetNullableString("ActionType");
+            auditEntry.EntityName = reader.GetNullableString("EntityName");
+            return auditEntry;
+        }
+
+        public static OrderReport ToOrderReport(this IDataReader reader, string account)
+        {
+            OrderReport r = new OrderReport();
+            r.Account = account;
+            using (SafeDataReader sr = new SafeDataReader(reader))
+            {
+                r.JobId = sr.GetNullableString("JobId");
+                r.FilePath = sr.GetNullableString("FilePath");
+                r.Html = sr.GetNullableString("Html");
+            }
+            return r;
+        }
+
+        public static PatientVisitHistory ToPatientVisitHistory(this IDataReader reader)
+        {
+            PatientVisitHistory r = new PatientVisitHistory();
+
+            using (SafeDataReader sr = new SafeDataReader(reader))
+            {
+                r.PatientVisitHistoryID = sr.GetInt64("AppointmentID");
+                //                r.LastName                  = sr.GetNullableString("Patient Last");
+                //                r.FirstName                 = sr.GetNullableString("Patient First");
+                r.EndDate = sr.GetDateTime("EndTime");
+                r.StartDate = sr.GetDateTime("StartTime");
+                r.VisitReason = sr.GetNullableString("VisitReason");
+                r.Status = sr.GetInt64("Status");
+                r.PatientIntId = Convert.ToInt32(sr.GetDecimal("AutoCount"));
+
+                if (sr.ContainsColumn("AppointmentID"))
+                    r.AppointmentId = sr.GetInt64("AppointmentID");
+
+                if (sr.ContainsColumn("PatAutoCount"))
+                    r.PatientIntId = sr.GetInt64("PatAutoCount");
+
+                long? modId = sr.GetNullableInt64("ModalityID");
+                if (modId.HasValue)
+                {
+                    r.ModalityId = (int)modId;
+                    r.ModalityName = sr.GetString("Name");
+                }
+
+                long? locId = sr.GetNullableInt64("LocationId");
+
+                if (locId.HasValue)
+                {
+                    r.LocationId = (int)locId;
+                    r.LocationName = sr.GetString("LocationName");
+                }
+                r.PendingReason = sr.GetNullableString("ReasonText");
+                r.PendingReasonCode = sr.GetNullableString("ReasonCode");
+            }
+
+            return r;
+        }
+
+        public static PatientContact ToPatientContact(this SafeDataReader sr)
+        {
+            PatientContact result = new PatientContact();
+            result.Id = sr.GetInt64("ID");
+            result.PatientId = sr.GetInt64("PatientId");
+            result.ContactTypeId = sr.GetString("ContactTypeId");
+            result.ContactTypeName = sr.GetString("ContactTypeName");
+            result.FirstName = sr.GetString("FirstName");
+            result.LastName = sr.GetString("LastName");
+            result.RelationshipId = sr.GetString("RelationshipId");
+            result.RelationshipName = sr.GetString("RelationshipName");
+            result.Phone = sr.GetNullableString("Phone");
+            result.Mobile = sr.GetNullableString("Mobile");
+            result.Email = sr.GetNullableString("Email");
+            result.Fax = sr.GetNullableString("Fax");
+            result.Address = sr.GetNullableString("Address");
+            result.Address2 = sr.GetNullableString("Address2");
+            result.City = sr.GetNullableString("City");
+            result.State = sr.GetNullableString("State");
+            result.Zip = sr.GetNullableString("Zip");
+            result.EmployerName = sr.GetNullableString("EmployerName");
+            result.EmploymentAddress = sr.GetNullableString("EmploymentAddress");
+            result.EmploymentAddress2 = sr.GetNullableString("EmploymentAddress2");
+            result.EmploymentCity = sr.GetNullableString("EmploymentCity");
+            result.EmploymentState = sr.GetNullableString("EmploymentState");
+            result.EmploymentZip = sr.GetNullableString("EmploymentZip");
+            result.EmployerPhone = sr.GetNullableString("EmployerPhone");
+            result.Comment = sr.GetNullableString("Comment");
+            if (sr.ContainsColumn("IsAuthorizedDelegate"))
+            {
+                result.IsAuthorizedDelegate = sr.GetBoolean("IsAuthorizedDelegate");
+            }
+            if (sr.ContainsColumn("CreateDate")) result.CreateDate = sr.GetDateTime("CreateDate");
+            if (sr.ContainsColumn("ModifyDate")) result.ModifyDate = sr.GetNullableDateTime("ModifyDate");
+
+            return result;
+        }
+
+        public static PatientAdditionalData ToPatientAdditionalData(this SafeDataReader sr)
+        {
+            var res = new PatientAdditionalData
+            {
+                Id = sr.GetInt32("ID"),
+                PatientId = sr.GetString("PatientId"),
+                HasBeenPregnant = sr.GetNullableBoolean("HasBeenPregnant"),
+                AgeFirstMenstruation = sr.GetNullableInt32("AgeFirstMenstruation"),
+                AgeAtMenopause = sr.GetNullableInt32("AgeAtMenopause"),
+                AgeWhenOvariesRemoved = sr.GetNullableInt32("AgeWhenOvariesRemoved"),
+                MenopauseStatus = sr.GetNullableString("MenopauseStatus"),
+                DateOfLastMammogram = sr.GetNullableDateTime("DateOfLastMammogram"),
+                FirstScreeningMammography = sr.GetNullableBoolean("FirstScreeningMammography"),
+                LocationX = sr.GetNullableString("LocationX"),
+                NoOfBirths = sr.GetNullableInt32("NoOfBirths"),
+                AgeAtFirstBirth = sr.GetNullableInt32("AgeAtFirstBirth"),
+                GeneticTestResults = sr.GetNullableString("GeneticTestResults")
+            };
+            return res;
+        }
+
+        public static PatientFamilyHistoryProblem ToPatientFamilyHistoryProblem(this SafeDataReader sr)
+        {
+            var res = new PatientFamilyHistoryProblem
+            {
+                PfhpId = sr.GetInt32("PfhpId"),
+                PfmId = sr.GetInt32("PfmId"),
+                PatientIntId = (long)sr.GetDecimal("PatientIntId"),
+                RelnTypCode = sr.GetString("RelnTypCode"),
+                Relationship = sr.GetString("Relationship"),
+                RelnStatusCode = sr.GetString("RelnStatusCode"),
+                RelnStatus = sr.GetString("RelnStatus"),
+                AgeDeceased = sr.GetNullableInt32("AgeDeceased"),
+                AgeDiagnosed = sr.GetNullableInt32("AgeDiagnosed"),
+                PmplId = sr.GetInt32("PmplId"),
+                MedicalProblem = sr.GetString("MedicalProblem"),
+            };
+            return res;
+        }
+
+        public static Surgeon ToSurgeon(this SafeDataReader sr)
+        {
+            Surgeon s = new Surgeon();
+            s.Name = sr.GetString("Name");
+
+            return s;
+        }
+
+        public static PathologyPathResults ToPathologyPathResults(this SafeDataReader sr)
+        {
+            PathologyPathResults r = new PathologyPathResults();
+
+            r.Id = sr.GetInt32("Id");
+            r.Code = sr.GetString("Code");
+            r.Description = sr.GetString("Description");
+
+            return r;
+        }
+
+
 
 
     }
