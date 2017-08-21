@@ -55,6 +55,10 @@
       <HintPath>..\packages\Microsoft.Owin.FileSystems.3.0.1\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin.StaticFiles">
       <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
       <Private>True</Private>
@@ -108,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="public\fontawesome-webfont.674f50d287a8c48dc19b.eot" />
+    <Content Include="public\fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
+    <Content Include="public\fontawesome-webfont.b06871f281fee6b241d6.ttf" />
+    <Content Include="public\fontawesome-webfont.fee66e712a8a08eef580.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,11 +124,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="public\Contents\abbadoxlogo_Scheduler.png" />
-    <Content Include="public\Contents\IDSwithoutWords.png" />
+    <Content Include="public\3rdpartylicenses.txt" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\fontawesome-webfont.912ec66d7572ff821749.svg" />
     <Content Include="public\index.html" />
-    <Content Include="public\Scripts\test.js" />
-    <Content Include="public\Styles\site.css" />
+    <Content Include="public\inline.ae9377b7ac0dec468393.bundle.js" />
+    <Content Include="public\inline.c5f9c604f0fcef292f9c.bundle.js" />
+    <Content Include="public\main.7b9808cbc4c8f4aaae84.bundle.js" />
+    <Content Include="public\main.ca518db5b3515c4eb727.bundle.js" />
+    <Content Include="public\polyfills.e443f0ea304329ec4053.bundle.js" />
+    <Content Include="public\styles.805a29ae203eb6806867.bundle.css" />
+    <Content Include="public\vendor.ff8aebbe5b5fdd06a8ce.bundle.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +163,9 @@
       <Name>Scheduler.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\assets\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -164,7 +181,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1337</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1337/</IISUrl>
+          <IISUrl>http://localhost/PM</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>True</UseCustomServer>
           <CustomServerUrl>

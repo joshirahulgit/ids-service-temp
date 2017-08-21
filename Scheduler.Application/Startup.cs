@@ -21,6 +21,7 @@ namespace Scheduler.Application
             String cs = @"Server=172.31.25.70;uid=sa;pwd=stagingsa;Trusted_Connection=False;Application Name=MachinesLocalDebuggingApplication;";
             //Set initial configuration for application.
             
+            //Set all the application settings here.
             IApplicationSetting appSet = new ApplicationSetting(100, 4, cs, cs);
             GlobalContext.Add(appSet);
 
@@ -37,10 +38,14 @@ namespace Scheduler.Application
                 defaults: new { id = RouteParameter.Optional }
             );
 
+//#if DEBUG
             //Allow cros just for debug mode.
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+//#endif
 
             app.UseWebApi(httpConfiguration);
+
+            //app.
 
             // Make ./public the default root of the static files in our Web Application.
             app.UseFileServer(new FileServerOptions

@@ -1,4 +1,5 @@
-﻿using Scheduler.Business.Implementation;
+﻿using Scheduler.Business.Entity;
+using Scheduler.Business.Implementation;
 using Scheduler.Business.Specification;
 using Scheduler.Core;
 using System;
@@ -30,8 +31,18 @@ namespace Scheduler.Application.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void Post([FromBody]AccountEnumDto accountEnumDto)
         {
+            IRequestContext rc = new RequestContext("gdeleon", "!password!", 92749, "solismammotest", null, "", "");
+            GlobalContext.Add(rc);
+
+            IAccountService accSer = ServiceFactory<IAccountService>.CreateNew();
+            AccountEnumsDto accEnums = new AccountEnumsDto()
+            {
+                AccountEnums = new List<AccountEnumDto>()
+            };
+            accEnums.AccountEnums.Add(accountEnumDto);
+            accSer.InsertUpdateAccountEnum(accEnums);
         }
 
         // PUT api/<controller>/5
